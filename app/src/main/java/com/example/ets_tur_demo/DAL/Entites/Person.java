@@ -3,10 +3,12 @@ package com.example.ets_tur_demo.DAL.Entites;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.ets_tur_demo.BLL.Validators.PersonValidator;
+
 import java.sql.Date;
 
 @Entity
-public class Person {
+public class Person{
     @PrimaryKey
     public int id;
     public String first_name;
@@ -15,4 +17,6 @@ public class Person {
     public String phone;
     public Date birthdate;
     public boolean is_active;
+
+
 }

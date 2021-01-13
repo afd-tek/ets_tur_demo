@@ -1,14 +1,16 @@
-package com.example.ets_tur_demo;
+package com.example.ets_tur_demo.Presentation.Views.Person;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.ets_tur_demo.R;
+
+public class EditView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.person_edit_view);
     }
 }
