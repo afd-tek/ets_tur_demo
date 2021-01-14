@@ -1,11 +1,14 @@
 package com.example.ets_tur_demo.DAL.DAOs.Database;
 
 import android.content.Context;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.ets_tur_demo.DAL.DAOs.PersonDAO;
 import com.example.ets_tur_demo.DAL.Entites.Person;
@@ -16,7 +19,6 @@ import java.util.concurrent.Executors;
 @Database(entities = {Person.class}, version = 1, exportSchema = false)
 @TypeConverters({Converter.class})
 public abstract class ETSDatabase extends RoomDatabase {
-
     public abstract PersonDAO personDAO();
 
     private static volatile ETSDatabase INSTANCE;
@@ -36,4 +38,7 @@ public abstract class ETSDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
+
+
 }

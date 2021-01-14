@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ets_tur_demo</string>
+    <string name="note">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="note_title">Not</string>
+    <string name="phone">+90 511 111 11 11</string>
+    <string name="phone_hint">Telefon</string>
+    <string name="mail">etstur@etstur.com</string>
+    <string name="mail_hint">E - Posta</string>
+    <string name="birthdate">01/01/1990</string>
+    <string name="birthdate_hint">Doğum Tarihi</string>
+    <string name="name">Ali Büyük</string>
 </resources>
