@@ -25,7 +25,7 @@ public interface PersonDAO {
     void Delete(int id);
 
     @Query("select * from Person where id = :id and is_active = 1")
-    Person GetById(int id);
+    LiveData<Person> GetById(int id);
 
     @Query("select * from Person where is_active = 1 order by first_name asc limit :pageSize offset :page*:pageSize")
     LiveData<List<Person>> GetAll(int page, int pageSize);

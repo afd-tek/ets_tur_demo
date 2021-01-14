@@ -1,14 +1,17 @@
 package com.example.ets_tur_demo.Presentation.Adapters.Product;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ets_tur_demo.DAL.Entites.Person;
+import com.example.ets_tur_demo.Presentation.Views.Person.EditView;
 import com.example.ets_tur_demo.R;
 
 import java.text.SimpleDateFormat;
@@ -21,6 +24,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     private final TextView tv_phone;
     private final TextView tv_note;
     private final LinearLayout cont_note;
+    private int person_id;
 
     private ViewHolder(View itemView) {
         super(itemView);
@@ -33,6 +37,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(Person person) {
+        person_id = person.id;
         tv_name.setText(String.format("%s %s", person.first_name, person.last_name));
         tv_birthdate.setText(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(person.birthdate));
         tv_email.setText(person.email);
@@ -43,6 +48,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         }else{
             cont_note.setVisibility(View.GONE);
         }
+
     }
 
     static ViewHolder create(ViewGroup parent) {

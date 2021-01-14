@@ -2,7 +2,7 @@ package com.example.ets_tur_demo.DAL.DAOs.Database;
 
 import androidx.room.TypeConverter;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Converter {
     @TypeConverter

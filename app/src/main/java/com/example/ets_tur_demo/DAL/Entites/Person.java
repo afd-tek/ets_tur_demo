@@ -5,7 +5,10 @@ import androidx.room.PrimaryKey;
 
 import com.example.ets_tur_demo.BLL.Validators.PersonValidator;
 
-import java.sql.Date;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 @Entity
 public class Person{

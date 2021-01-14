@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:gravity="bottom"
         android:background="@drawable/bg_appbar"
-        android:padding="32dp">
+        android:padding="16dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,7 +33,6 @@
 
             <ImageButton
                 android:id="@+id/btn_person_collection_view_add"
-                android:hint="@string/search_hint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edittext"
@@ -75,6 +74,9 @@
                 />
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

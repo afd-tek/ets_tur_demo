@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ets_tur_demo</string>
     <string name="note">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <string name="note_title">Not</string>
+    <string name="note_hint">Not</string>
     <string name="phone">+90 511 111 11 11</string>
     <string name="phone_hint">Telefon</string>
     <string name="mail">etstur@etstur.com</string>
@@ -11,4 +11,20 @@
     <string name="name">Ali Büyük</string>
     <string name="search_hint">Kişi Ara</string>
     <string name="title_person_collection">Kişiler</string>
+    <string name="title_person_edit">Kişi Ekle</string>
+    <string name="first_name_valid">Ad en az 2 en çok 20 karakter olmalı!</string>
+    <string name="last_name_valid">Soyad en az 2 en çok 20 karakter olmalı!</string>
+    <string name="email_valid">Email adresi geçerli değil!</string>
+    <string name="phone_valid">Telefon numaranızı başında 0 olmadan giriniz!</string>
+    <string name="note_valid">Not en fazla 100 karakter olmalı!</string>
+    <string name="first_name_hint">Ad</string>
+    <string name="last_name_hint">Soyad</string>
+    <string name="edit_view_submit_text">KAYDET / GÜNCELLE</string>
+    <string name="birthdate_valid">Lütfen doğum tarihinizi Gün/Ay/Yıl şeklinde giriniz!</string>
+    <string name="toast_success_text">İşlem Başarılı</string>
+
+    <string-array name="spinner_entries">
+        <item>+90</item>
+        <item>+1</item>
+    </string-array>
 </resources>

@@ -40,7 +40,7 @@ public class PersonRepository {
         ETSDatabase.databaseWriteExecutor.execute(() -> mPersonDAO.Delete(id));
     }
 
-    public Person GetById(int id) {
+    public LiveData<Person> GetById(int id) {
         return mPersonDAO.GetById(id);
     }
 

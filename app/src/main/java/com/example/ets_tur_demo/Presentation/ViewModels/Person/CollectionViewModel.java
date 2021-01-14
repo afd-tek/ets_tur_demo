@@ -32,4 +32,19 @@ public class CollectionViewModel extends AndroidViewModel {
     public LiveData<List<Person>> searchPeople(String query) {
         return mRepository.GetByName(query);
     }
+
+    public LiveData<Person> GetById(int id){
+        return mRepository.GetById(id);
+    }
+
+    public void Update(Person person){
+        mRepository.Update(person);
+    }
+
+    public void Insert(Person person) {
+        mRepository.Insert(person);
+    }
+    public void Delete(int id) {
+        mRepository.Delete(id);
+    }
 }

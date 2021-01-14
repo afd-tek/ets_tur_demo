@@ -1,8 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presentation.Views.Person.EditView">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Presentation.Views.Person.EditView"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/bg_appbar"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:text="@string/title_person_edit"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/HeaderText"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_person_edit_view_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_edittext"
+                android:src="@drawable/ic_back"
+                android:padding="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:onClick="OnClick"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/first_name_hint"/>
+
+                <EditText
+                    android:id="@+id/et_person_edit_view_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputText"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_name_validation"
+                android:text="@string/first_name_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/last_name_hint"/>
+
+                <EditText
+                    android:id="@+id/et_person_edit_view_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputText"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_surname_validation"
+                android:text="@string/last_name_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/mail_hint"/>
+
+                <EditText
+                    android:id="@+id/et_person_edit_view_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputText"
+                    android:background="@android:color/transparent"
+                    android:inputType="textEmailAddress"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_email_validation"
+                android:text="@string/email_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/birthdate_hint"/>
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/et_person_edit_view_birthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputText"
+                    android:background="@android:color/transparent"
+                    android:inputType="number"
+                    app:mask="##/##/####"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_birthdate_validation"
+                android:text="@string/birthdate_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/phone_hint"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_person_edit_view_country_code"
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/spinner_entries"
+                        android:background="@drawable/bg_spinner"
+                        />
+
+
+                    <br.com.sapereaude.maskedEditText.MaskedEditText
+                        android:id="@+id/et_person_edit_view_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/InputText"
+                        android:background="@android:color/transparent"
+                        app:mask="5## ### ## ##"
+                        android:inputType="number"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_phone_validation"
+                android:text="@string/phone_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputHint"
+                    android:text="@string/note_hint"/>
+
+                <EditText
+                    android:id="@+id/et_person_edit_view_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="3"
+                    style="@style/InputText"
+                    android:textAlignment="viewStart"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_person_edit_view_note_validation"
+                android:text="@string/note_valid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                style="@style/ErrorText"/>
+
+            <Button
+                android:id="@+id/btn_person_edit_view_submit"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_view_submit_text"
+                style="@style/ButtonText"
+                android:background="@drawable/bg_button"
+                android:onClick="OnClick"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
