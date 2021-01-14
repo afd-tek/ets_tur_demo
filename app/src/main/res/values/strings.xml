@@ -9,4 +9,6 @@
     <string name="birthdate">01/01/1990</string>
     <string name="birthdate_hint">Doğum Tarihi</string>
     <string name="name">Ali Büyük</string>
+    <string name="search_hint">Kişi Ara</string>
+    <string name="title_person_collection">Kişiler</string>
 </resources>

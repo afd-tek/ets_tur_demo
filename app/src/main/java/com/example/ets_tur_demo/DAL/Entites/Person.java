@@ -18,4 +18,15 @@ public class Person{
     public Date birthdate;
     public boolean is_active;
     public String note;
+
+
+    public Person(String first_name, String last_name, String email, String phone, Date birthdate, String note) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.phone = phone;
+        this.birthdate = birthdate;
+        this.is_active = true;
+        this.note = note;
+    }
 }

@@ -30,6 +30,6 @@ public interface PersonDAO {
     @Query("select * from Person where is_active = 1 order by first_name asc limit :pageSize offset :page*:pageSize")
     LiveData<List<Person>> GetAll(int page, int pageSize);
 
-    @Query("select * from Person where (first_name like :query or last_name like :query) and is_active = 1")
+    @Query("select * from Person where (first_name like :query or last_name like :query) and is_active = 1 order by first_name")
     LiveData<List<Person>> GetByName(String query);
 }
